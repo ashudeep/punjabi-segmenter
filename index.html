@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>CS671: Assignment 2</title>
+	</head>
+	<body>
+		<h1 class="header" style="font-variant: small-caps; font-weight: normal; border: none; color: rgb(102, 102, 102); font-family: georgia, Verdana, Helvetica, Arial, FreeSans, sans-serif; background-color: rgb(255, 255, 255); text-align: center;">
+			CS671: Assignment 2A</h1>
+		<h2 style="font-variant: small-caps; font-weight: normal; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(204, 204, 204); color: rgb(102, 102, 102); font-family: georgia, Verdana, Helvetica, Arial, FreeSans, sans-serif; background-color: rgb(255, 255, 255); text-align: center;">
+			HW2 - n-gram based Language Models</h2>
+		<h3 style="font-variant: small-caps; font-weight: normal; color: rgb(102, 102, 102); font-family: georgia, Verdana, Helvetica, Arial, FreeSans, sans-serif; background-color: rgb(255, 255, 255); text-align: center;">
+			A. Word boundary segmentation</h3>
+		<p style="text-align: center;">
+			<span style="font-size:18px;">The Punjabi Word corpus used was <a href="wordlist_filtered.pun">&quot;wordlist_filtered.pun&quot;</a> which contained the words from the full wordlist with frequencies greater than 2. The bigrams list used was <a href="Pan_2-Grams.txt">&quot;Pan_2-Grams.txt&quot;</a>. &nbsp;The code used was <a href="code.py">&quot;code.py&quot;</a>.</span></p>
+		<p style="text-align: center;">
+			<span style="font-size:18px;">Test File Used: <a href="">mytest.txt</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The source used was from 4-5 news articles dated 13/9/13&nbsp;<a href="http://www.jagbani.com/">http://www.jagbani.com/</a>&nbsp;<br />
+			Test File with spaces removed: <a href="mytest_nospace.txt">mytest_nospace.txt</a></span></p>
+		<h2 style="text-align: center;">
+			<span style="font-size:18px;">Results</span></h2>
+		<p style="text-align: center;">
+			<span style="font-size:18px;">The precision and recall with the Ground truth as <a href="mytest.txt">mytest.txt</a>.</span></p>
+		<center>
+			<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+							&nbsp;</td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;"><em><strong>Precision</strong></em></span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;"><em><strong>Recall</strong></em></span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;"><em><strong>f-score</strong></em></span></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">
+							<span style="font-size:18px;"><em><strong>Unigrams</strong></em></span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">9.2621359223</span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">0.971486761711</span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">0.948310139165</span></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">
+							<span style="font-size:18px;"><strong><em>Unigrams+Bigrams</em></strong></span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">0.933202357564&nbsp;</span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">0.967413441955</span></td>
+						<td style="text-align: center;">
+							<span style="font-size:18px;">0.95</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="text-align: center;">
+				&nbsp;</p>
+		</center>
+		<p style="text-align: center;">
+			<span style="font-size:18px;">The major parameter to experiment was the Probability of finding a word which didn&#39;t exist in the unigram list. The best value of this parameter was around 1/(10^6).</span><br />
+			&nbsp;</p></body>
+</html>
